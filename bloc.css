@@ -1,0 +1,9 @@
+.bloc {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}

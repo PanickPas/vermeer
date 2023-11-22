@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Vermeer</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/vendor.css">  
+   <link rel="stylesheet" href="css/main.css">
+        
+
+   <!-- script
+   ================================================== -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.jpg" type="image/x-icon">
+	<link rel="stylesheet" href="cookies.css">
+	<link rel="stylesheet" href="bloc.css">
+    <script src="bloc.js"></script>
+
+	<link rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var slides = $("#featured-post-slider ul.slides li");
+            var randomOrder = shuffle(slides);
+
+            $("#featured-post-slider ul.slides").html(randomOrder);
+            
+            $('.flexslider').flexslider({
+                animation: "slide",
+                controlNav: false,
+                slideshow: true
+            });
+
+            function shuffle(array) {
+                var currentIndex = array.length, randomIndex, temporaryValue;
+                while (currentIndex !== 0) {
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+                    temporaryValue = array[currentIndex];
+                    array[currentIndex] = array[randomIndex];
+                    array[randomIndex] = temporaryValue;
+                }
+                return array;
+            }
+        });
+    </script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 56.25%; /* Ratio 16:9 pour les vidéos */
+            height: 0;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            // Ciblez la vidéo iframe
+            var videoContainer = $("#video-container");
+            var videoIframe = videoContainer.find("iframe");
+
+            // Ajoutez un gestionnaire de clic à la div contenant la vidéo
+            videoContainer.click(function() {
+                // Obtenez l'URL de la vidéo
+                var videoURL = videoIframe.attr("src");
+
+                // Supprimez l'URL actuel de la vidéo
+                videoIframe.attr("src", "");
+
+                // Ajoutez à nouveau l'URL de la vidéo pour démarrer la lecture
+                videoIframe.attr("src", videoURL);
+            });
+        });
+    </script>
+</head>
+
+<body id="top">
+    <div class="overlay" id="cookieConsent">
+        <div class="popup">
+            <h2>Cookies Consentement</h2>
+            <p>Ce site web utilise des cookies pour améliorer votre expérience. Vous avez le choix d'accepter ou d'accepter l'utilisation des cookies en configurant les paramètres de votre navigateur.</p>
+            <div class="buttons">
+                <button id="acceptButton">Accepter</button>
+				<div class="ou">ou</div>
+                <button id="continueButton"> accepter</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="cookies.js"></script>
+
+	<!-- header 
+   ================================================== -->
+   <header class="short-header">   
+
+   	<div class="gradient-block"></div>	
+
+   	<div class="row header-content">
+
+   		<div class="logo">
+	         <a href="index.html">Author</a>
+	      </div>
+
+	   	<nav id="main-nav-wrap">
+				<ul class="main-navigation sf-menu">
+					<li class="current"><a href="index.html" title="">Home</a></li>																			
+				</ul>
+			</nav> <!-- end main-nav-wrap -->
+   		
+   	</div>     		
+   	
+   </header> <!-- end header -->
+
+
+   <!-- masonry
+   ================================================== -->
+   <section id="bricks">
+
+   	<div class="row masonry">
+
+   		<!-- brick-wrapper -->
+         <div class="bricks-wrapper">
+
+         	<div class="grid-sizer"></div>
+
+         	<div class="brick entry featured-grid animate-this">
+         		<div class="entry-content">
+					
+         			<div id="featured-post-slider" class="flexslider">
+			   			<ul class="slides">
+
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/vermeer/la_laitière.jpg');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">	
+
+								   		<h1 class="slide-title"><a title="">La laitiere</a></h1> 
+								   	</div> 				   					  
+				   			
+				   				</div>
+				   			</li> <!-- /slide -->
+
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/vermeer/lentremetteuse.jpg');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+
+								   		<h1 class="slide-title"><a title="">L'Entremetteuse</a></h1>
+						   			</div>		   				   					  
+				   			
+				   				</div>
+				   			</li> <!-- /slide -->
+
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/vermeer/la_perle.jpg');;"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+
+								   		<h1 class="slide-title"><a title="">Le Jeune Fille à la perle</a></h1>
+						   			</div>
+
+				   				</div>
+				   			</li> <!-- end slide -->
+							
+							<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/vermeer/dentellière.jpg');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+
+								   		<h1 class="slide-title"><a title="">La Dentellière</a></h1>
+						   			</div>		   				   					  
+				   			
+				   				</div>
+				   			</li> <!-- /slide -->
+														
+							<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/vermeer/chapeau_rouge.jpg');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+
+
+								   		<h1 class="slide-title"><a title="">La fille au chapeau rouge</a></h1>
+						   			</div>		   				   					  
+				   			
+				   				</div>
+				   			</li> <!-- /slide -->
+							
+							<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/vermeer/laiguillère.jpg');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+
+								   		<h1 class="slide-title"><a title="">Jeune Femme à l'aiguière</a></h1>
+						   			</div>		   				   					  
+				   			
+				   				</div>
+				   			</li> <!-- /slide -->
+																				
+							<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/vermeer/lettredamour.jpg');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+
+
+								   		<h1 class="slide-title"><a title="">La Lettre d'amour</a></h1>
+						   			</div>		   				   					  
+				   			
+				   				</div>
+							</li>
+							
+							<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/vermeer/lofficier_et_la_jeune_fille.png');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">
+
+								   		<h1 class="slide-title"><a title="">Soldat et jeune fille riant </a></h1>
+						   			</div>		   				   					  
+				   			
+				   				</div>
+							</li>
+							
+				   			<li>
+				   				<div class="featured-post-slide">
+
+						   			<div class="post-background" style="background-image:url('images/vermeer/foie.jpg');"></div>
+
+								   	<div class="overlay"></div>			   		
+
+								   	<div class="post-content">>	
+
+								   		<h1 class="slide-title"><a title="">l'allégorie de la Foi </a></h1>
+						   			</div>		   				   					  
+				   			
+				   				</div>
+							</li>
+							
+							<li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="background-image:url('images/vermeer/astronome.jpg');"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">	
+
+										<h1 class="slide-title"><a title="">L'astronome</a></h1>
+									</div>		   				   					  
+							
+								</div>
+							</li>
+							
+							<li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="background-image:url('images/vermeer/clavicorde.jpg');"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">
+										<h1 class="slide-title"><a title="">Jeune femme jouant du virginal </a></h1>
+									</div>		   				   					  
+							
+								</div>
+							</li>
+					 
+							<li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="background-image:url('images/vermeer/flute.jpg');"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">
+
+
+										<h1 class="slide-title"><a title="">La Jeune fille à la flûte</a></h1>
+									</div>		   				   					  
+							
+								</div>
+							</li>
+			 
+							<li>
+									<div class="featured-post-slide">
+
+										<div class="post-background" style="background-image:url('images/vermeer/geographe.jpg');"></div>
+
+										<div class="overlay"></div>			   		
+
+										<div class="post-content">
+
+
+											<h1 class="slide-title"><a title="">Le Géographe</a></h1>
+										</div>		   				   					  
+								
+									</div>
+							</li>
+		 
+							<li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="background-image:url('images/vermeer/la_liseuse.png');"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">
+
+
+										<h1 class="slide-title"><a title="">La Liseuse à la fenêtre</a></h1>
+									</div>		   				   					  
+							
+								</div>
+							</li>
+
+							<li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="background-image:url('images/vermeer/lettredamour.jpg');"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">
+
+
+										<h1 class="slide-title"><a title="">La Lettre d'amour</a></h1>
+									</div>		   				   					  
+							
+								</div>
+							</li>
+
+							<li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="background-image:url('images/vermeer/portrait.jpg');"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">
+
+
+										<h1 class="slide-title"><a title="">Portrait d'une jeune femme</a></h1>
+									</div>		   				   					  
+							
+								</div>
+							</li>
+
+							<li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="background-image:url('images/vermeer/lart_de_la_peinture.jpg');"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">
+
+										<h1 class="slide-title"><a title="">L'Art de la peinture </a></h1>
+									</div>		   				   					  
+							
+								</div>
+							</li>
+
+							<li>
+								<div class="featured-post-slide">
+
+									<div class="post-background" style="background-image:url('images/vermeer/servante.jpg');"></div>
+
+									<div class="overlay"></div>			   		
+
+									<div class="post-content">
+
+
+										<h1 class="slide-title"><a title="">Femme écrivant une lettre et sa servante </a></h1>
+									</div>		   				   					  
+							
+								</div>
+							</li>
+ 
+ 
+ 
+				   		</ul> <!-- end slides -->
+				   	</div> <!-- end featured-post-slider -->        			
+         		</div> <!-- end entry content -->         		
+         	</div>
+			 <div id="articles-container">
+				<article class="brick entry format-standard animate-this" class="bloc" data-moveable="true" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/la_laitière.jpg" alt="building">             
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a> 1658 </a>               				
+							</span>			
+						</div>
+
+						<h1 class="entry-title">La laitiere</h1>
+						
+					</div>
+							<div class="entry-excerpt">
+
+					<p>"La Laitière" de Johannes Vermeer, vers 1658, est un chef-d'œuvre de la peinture hollandaise du Siècle d'Or. Cette toile captivante présente une scène quotidienne du XVIIe siècle avec une précision remarquable. La lumière douce, venant d'une fenêtre latérale, accentue chaque détail. La composition équilibrée, les couleurs subtiles et les ombres habilement représentées ajoutent à la réalité de la scène. "La Laitière" reste un trésor intemporel, fascinant les amateurs d'art par sa minutie réaliste, son jeu subtil de lumière et sa représentation évocatrice de la vie quotidienne de l'époque. </p>
+							</div>
+				</div>
+
+					</article> <!-- end article -->
+
+				<article class="brick entry format-standard animate-this" class="bloc" data-moveable="true" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/lentremetteuse.jpg" alt="ferris wheel">                   
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a> 1656 </a>                			
+							</span>			
+						</div>
+
+						<h1 class="entry-title">L'Entremetteuse</h1>              		
+					</div>
+							<div class="entry-excerpt" >
+					<p> "L'Entremetteuse" de Johannes Vermeer, vers 1656, est une œuvre phare de la peinture hollandaise du Siècle d'Or. La toile représente une conversation entre une femme et un homme à une table, éclairée par une lumière douce venant de gauche. La composition est équilibrée, avec des couleurs discrètes et des détails rendus avec précision. La maîtrise de Vermeer de la lumière naturelle ajoute une chaleur à la scène. C'est une œuvre qui continue de fasciner par son réalisme minutieux et son évocation de la vie du XVIIe siècle. </p>
+							</div>
+				</div>
+				
+					</article> <!-- end article -->
+
+				<!-- format audio here -->
+				<article class="brick entry format-audio animate-this"class="bloc" data-moveable="true" style="text-align: center;">
+					
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/la_perle.jpg" alt="concert">                      
+					</a>
+
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1665</a>                 				
+							</span>			
+						</div>
+
+						<h1 class="entry-title" >La Jeune Fille à la perle</h1>
+						
+					</div>
+							<div class="entry-excerpt" >
+					<p> "La Jeune Fille à la Perle" de Johannes Vermeer, vers 1665, est un chef-d'œuvre de la peinture hollandaise. Cette toile présente une jeune femme éclairée par une lumière douce, portant une perle d'oreille. La composition est équilibrée, les couleurs sont subtiles, chaque détail est d'une précision exquise. Vermeer maîtrise la lumière naturelle, créant une ambiance captivante autour de la jeune fille. C'est une œuvre qui continue de fasciner par son réalisme minutieux et l'énigme du regard de la jeune femme. </p>
+							</div>
+				</div>
+				
+					</article> <!-- /article -->
+
+				<article class="brick entry format-quote animate-this" style="text-align: center;" >
+
+				<div class="entry-thumb">                  
+					<blockquote>
+					<p>Vermeer est souvent surnommé "le Sphinx de Delft" en raison de la relative obscurité qui entoure sa vie et sa carrière. Peu de détails sur sa vie personnelle sont connus, et il n'a laissé qu'une petite quantité d'œuvres derrière lui.</p>
+
+							<cite>La période de silence artistique </cite> 
+					</blockquote>	          
+				</div>   
+
+					</article> <!-- end article -->
+
+				<article class="brick entry animate-this" style="text-align: center;">
+
+				<div>
+					<a>
+						<img src="images/vermeer/dentellière.jpg" alt="Shutterbug">                      
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1669 - 1671</a>                 				
+							</span>			
+						</div>
+
+						<h1 class="entry-title">La Dentellière</h1>
+						
+					</div>
+							<div class="entry-excerpt">
+					<p>"La Dentellière" de Johannes Vermeer, entre  1669 - 1671, est un chef-d'œuvre de la peinture hollandaise. Cette toile représente une femme travaillant sur de la dentelle, éclairée par une lumière douce. La composition est équilibrée, les couleurs sont douces, et chaque détail est rendu avec une précision exquise. Vermeer excelle dans la gestion de la lumière naturelle, créant une atmosphère intime autour de la dentellière. C'est une œuvre qui continue de captiver par son réalisme minutieux et sa représentation évocatrice de la vie quotidienne du XVIIe siècle.	</p>					
+				
+				</div>
+				
+					</article> <!-- end article -->
+
+				<article class="brick entry animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/chapeau_rouge.jpg" alt="USAF rocket">                      
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1665 - 1667</a>                				
+							</span>			
+						</div>
+
+						<h1 class="entry-title">La Fille au chapeau rouge</h1>
+						
+					</div>
+							<div class="entry-excerpt">
+					<p>La "Fille au Chapeau Rouge" de Johannes Vermeer, entre 1665 et 1667, est un joyau de la peinture hollandaise. Cette toile présente une jeune fille avec un chapeau rouge, baignée dans une lumière douce. La composition est équilibrée, les couleurs sont vives, chaque détail est d'une précision exceptionnelle. Vermeer excelle dans la gestion de la lumière naturelle, créant une atmosphère charmante autour de la jeune fille. C'est une œuvre qui continue de captiver par son réalisme minutieux et sa capacité à immortaliser la beauté intemporelle de la jeunesse. </p>
+							</div>
+				</div>
+				
+					</article> <!-- end article -->        	
+
+					<article class="brick entry format-gallery group animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">
+
+					<div class="post-slider flexslider">
+						<a>
+						<img src="images/vermeer/laiguillère.jpg">                      
+						</a>			
+					</div> 
+
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1662 - 1665</a>               				
+							</span>			
+						</div>
+
+						<h1 class="entry-title" >Jeune Femme a l'aiguière</h1>
+						
+					</div>
+							<div class="entry-excerpt">
+					<p> "Jeune Femme à l'Aiguière" de Johannes Vermeer, vers 1662, est un trésor de la peinture hollandaise. Cette toile présente une jeune femme tenant une aiguière, éclairée par une douce lumière. La composition est équilibrée, les couleurs sont riches, chaque détail est d'une précision exquise. Vermeer excelle dans la gestion de la lumière naturelle, créant une ambiance captivante autour de la jeune femme. C'est une œuvre qui continue de fasciner par son réalisme minutieux et son évocation de la vie quotidienne du XVIIe siècle. </p>
+							</div>
+				</div>
+				
+					</article> <!-- end article -->
+
+				<article class="brick entry format-quote animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">                  
+					<blockquote>
+					<p>Vermeer était maître dans l'utilisation de la lumière et de la couleur dans ses tableaux. Il utilisait fréquemment une technique de peinture appelée "pointillisme" pour créer des effets lumineux subtils. Cette utilisation de la lumière lui a valu une grande admiration pour sa capacité à rendre la réalité avec précision.</p>
+
+							<cite>La lumière mystérieuse </cite> 
+					</blockquote>	          
+				</div>   
+			
+				
+					</article> <!-- end article -->
+
+
+				<article class="brick entry animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/lart_de_la_peinture.jpg" alt="Pattern">              
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1666 - 1668</a>               			
+							</span>			
+						</div>
+
+						<h1 class="entry-title" >L'Art de la Peinture</h1>
+						
+					</div>
+							<div class="entry-excerpt">
+						<p>"L'Art de la Peinture" de Johannes Vermeer, créé vers 1666-1668, est un chef-d'œuvre de la peinture hollandaise. Il représente une artiste en train de travailler sur une toile, entourée de symboles artistiques et culturels. La composition est soignée, les couleurs sont riches, chaque détail est minutieusement représenté. La lumière naturelle qui entre par une fenêtre latérale crée une atmosphère captivante. Cette œuvre est riche en symbolisme et invite à la réflexion sur la créativité artistique et la relation entre l'art et la réalité. C'est un chef-d'œuvre intemporel de la carrière de Vermeer.</p>
+							</div>
+				</div>
+				
+					</article> <!-- end article -->
+
+
+					<article class="brick entry animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/astronome.jpg" alt="Lighthouse">                      
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1668</a> 
+							</span>			
+						</div>
+
+						<h1 class="entry-title">L'Astronome</a></h1>
+						
+					</div>
+							<div class="entry-excerpt">
+					<p>"L'Astronome" de Johannes Vermeer, créé vers 1668, est une œuvre exceptionnelle de la peinture hollandaise. Cette toile représente un astronome penché sur un globe céleste, éclairé par une douce lumière extérieure. Les couleurs sont subtiles, les détails sont précis. Vermeer excelle dans la gestion de la lumière naturelle, créant une ambiance studieuse autour de l'astronome. C'est une œuvre qui illustre la passion pour la science de l'époque tout en capturant la beauté du réalisme caractéristique de Vermeer.</p>
+							</div>
+				</div>
+				
+					</article> <!-- end article -->
+
+					<article class="brick entry animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/lettredamour.jpg" alt="Liberty">                      
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1669</a>                	
+							</span>			
+						</div>
+
+						<h1 class="entry-title" >La lettre d'amour</h1>
+						
+					</div>
+							<div class="entry-excerpt">
+							
+					<p>"La Jeune Fille à la Perle" de Johannes Vermeer, peinte vers 1665, est un chef-d'œuvre emblématique de la peinture hollandaise. Cette toile présente une jeune femme tenant une perle d'oreille, éclairée par une lumière douce venant de la gauche. Les couleurs sont douces, la composition est équilibrée, et chaque détail est rendu avec une précision exquise. Vermeer excelle dans la gestion de la lumière naturelle, créant une atmosphère envoûtante autour de la jeune fille. C'est une œuvre qui continue de captiver par son réalisme minutieux et l'aura de mystère qui entoure le regard de la jeune fille. Elle incarne parfaitement la virtuosité de Vermeer dans la représentation de la lumière et de la beauté féminine.</p>
+							</div>
+				</div>
+				
+					</article> <!-- end article -->
+					
+					<article class="brick entry animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/geographe.jpg" alt="Liberty">                      
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1668 - 1669</a>                	
+							</span>			
+						</div>
+
+						<h1 class="entry-title" >Le Géographe</h1>
+						
+					</div>
+							<div class="entry-excerpt" >
+					<p> "Le Géographe" de Johannes Vermeer, peint vers 1669, est une œuvre remarquable de la peinture hollandaise. Elle représente un géographe étudiant une carte sur une table. La composition est équilibrée, les couleurs sont subtiles, les détails sont précis. Vermeer excelle dans la gestion de la lumière naturelle, créant une ambiance studieuse autour du géographe. Cette peinture illustre la passion pour la cartographie de l'époque et témoigne du talent de Vermeer pour capturer la curiosité intellectuelle et la recherche scientifique. C'est une œuvre qui continue de fasciner par son réalisme et son évocation de l'exploration du monde au XVIIe siècle.</p>		
+							</div>
+				</div>
+								
+					</article> <!-- end article -->
+		
+					
+					<article class="brick entry format-quote animate-this" style="text-align: center;">
+
+				<div class="entry-thumb" >                  
+					<blockquote>
+					<p>Après sa mort, les œuvres de Vermeer ont été largement oubliées pendant des siècles. Ce n'est qu'au XIXe siècle qu'elles ont été redécouvertes et que Vermeer a été reconnu comme un maître de la peinture hollandaise.</p>
+
+							<cite>La redécouverte de Vermeer</cite> 
+					</blockquote>	          
+				</div>   
+					</article> <!-- end article -->
+					
+					<article class="brick entry animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/la_liseuse.png" alt="Liberty">                      
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1657</a>                	
+							</span>			
+						</div>
+
+						<h1 class="entry-title"> La Liseuse à la fenêtre</h1>
+						
+					</div>
+							<div class="entry-excerpt" >
+					<p> "La Liseuse à la Fenêtre" de Johannes Vermeer, peint vers 1665, est une œuvre captivante. Elle représente une femme lisant près d'une fenêtre, éclairée par la lumière douce du jour. La composition est équilibrée, les couleurs sont douces, les détails sont précis. Vermeer excelle dans la gestion de la lumière naturelle, créant une atmosphère calme et contemplative autour de la liseuse. Cette peinture reflète l'intimité d'un moment de lecture solitaire et continue de fasciner par son réalisme minutieux. C'est une œuvre qui évoque la quiétude de la vie quotidienne au XVIIe siècle. </p>		
+							</div>
+				</div>
+				
+					</article> <!-- end article -->
+					
+					<article class="brick entry format-video animate-this" style="text-align: center;">
+						<div id="video-container">
+							<iframe
+								width="300"
+								height="315"
+								src="https://www.youtube.com/embed/bncM8kOCOLs"
+							></iframe>
+						</div>
+				
+						<div class="entry-text">
+							<div class="entry-header">
+								<div class="entry-meta">
+									<span class="cat-links">
+										<a>Trappeurs & Trappeuse Québec</a>
+									</span>
+								</div>
+				
+								<h1 class="entry-title"><a>Video "Le monde dans un tableau Le chapeau de Vermeer VF</a></h1>
+							</div>
+							<div class="entry-excerpt">
+								<p>Le tableau "L'Officier et la jeune fille riant" de Vermeer révèle une profondeur insoupçonnée. Ce documentaire plonge dans les mystères enfouis de cette œuvre, dévoilant une histoire complexe entrelacée avec la mondialisation, le capitalisme et les révolutions artistiques du Siècle d'or. Il manie habilement différentes époques et disciplines pour décoder ce passé contemporain, nous emmenant de Delft à New York en passant par le Québec. Dans cette aventure, il dévoile les prémices des échanges commerciaux entre l'Europe et l'Amérique, l'émergence de la Bourse à Amsterdam, ainsi que le tout premier krach boursier engendré par une spéculation sur les tulipes. Ce récit érudit, narré par François Morel, trouve une conclusion intrigante : le tableau repose aujourd'hui dans un musée de Manhattan, évoquant subtilement la naissance de cette ville.</p>.
+							</div>
+						</div>
+					</article> <!-- end article -->
+
+					<article class="brick entry format-video animate-this" style="text-align: center;">
+						<div id="video-container">
+							<iframe 
+							width="300" 
+							height="315" 
+							src="https://www.youtube.com/embed/0QQQqHsqUtk" 
+							frameborder="0" allowfullscreen></iframe>
+						</div>
+					
+						<div class="entry-text">
+							<div class="entry-header">
+								<div class="entry-meta">
+									<span class="cat-links">
+										<a>Scribe Accroupi</a>
+									</span>
+								</div>
+					
+								<h1 class="entry-title"><a>Vermeer au musée du Louvre</a></h1>
+							</div>
+							<div class="entry-excerpt">
+								<p>Visite avec Blaise Ducos, commissaire de l'exposition "Vermeer et les maîtres de la peinture de genre" au Musée du Louvre du 22 février au 22 mai 2017.</p>.
+							</div>
+						</div>
+					</article> <!-- end article -->
+
+					<article class="brick entry animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/lofficier_et_la_jeune_fille.png" alt="Liberty">                      
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1667</a>                	
+							</span>			
+						</div>
+
+						<h1 class="entry-title">Soldat et jeune fille riant</h1>
+						
+					</div>
+							<div class="entry-excerpt" >
+					<p>"Le Soldat et la Jeune Fille Riant" de Johannes Vermeer, une toile du XVIIe siècle, dépeint un moment charmant entre un soldat et une jeune femme. La composition est équilibrée, les couleurs sont douces, et chaque détail est rendu avec précision. La lumière crée une ambiance chaleureuse, mettant en avant l'interaction entre les deux personnages. Cette œuvre capture une scène de flirt spontanée de la vie quotidienne du XVIIe siècle, démontrant le talent de Vermeer pour la représentation de la complexité des émotions humaines. C'est une peinture qui continue de fasciner par sa représentation évocatrice et sa subtilité dans l'expression des personnages.</p>
+							</div>
+				</div>
+				
+					</article> <!-- end article -->
+									
+					<article class="brick entry animate-this" style="text-align: center;">
+
+				<div class="entry-thumb">
+					<a>
+						<img src="images/vermeer/vermeer.jpg" alt="Liberty">                      
+					</a>
+				</div>
+
+				<div class="entry-text">
+					<div class="entry-header">
+
+						<div class="entry-meta">
+							<span class="cat-links">
+								<a>1632 - 1675</a>                	
+							</span>			
+						</div>
+
+						<h1 class="entry-title"> Johannes Vermeer<h1>
+						
+					</div>
+							<div class="entry-excerpt">
+					<p>Johannes Vermeer (1632-1675) était un peintre néerlandais du Siècle d'Or, célèbre pour ses œuvres de genre et ses portraits réalistes. Il est né à Delft, aux Pays-Bas, où il a passé la majeure partie de sa vie et a créé environ 35 à 40 tableaux. Vermeer est connu pour sa maîtrise exceptionnelle de la lumière et son talent pour capturer des scènes de la vie quotidienne avec une précision minutieuse. Bien qu'il n'ait pas connu la renommée de son vivant, son héritage artistique perdure, influençant de nombreux artistes ultérieurs, notamment les impressionnistes.</p>
+							</div>
+				</div>
+				
+					</article> <!-- end article -->
+					
+					<article class="brick entry format-quote animate-this" style="text-align: center;">
+
+				<div class="entry-thumb" >                  
+					<blockquote>
+					<p>Vermeer n'a produit qu'environ 35 à 40 peintures connues au cours de sa vie relativement courte. Il était peu prolifique par rapport à certains de ses contemporains, ce qui ajoute à la fascination entourant son travail.</p>
+
+							<cite>Carrière limitée</cite> 
+					</blockquote>	          
+				</div>   
+					</article> <!-- end article -->
+				</div>
+				<script>
+					document.addEventListener('DOMContentLoaded', function () {
+						var articlesContainer = document.getElementById('articles-container');
+						var articles = articlesContainer.children;
+			
+						for (var i = articles.length; i >= 0; i--) {
+							articlesContainer.appendChild(articles[Math.random() * i | 0]);
+						}
+					});
+				</script>
+				<article class="brick entry format-quote animate-this" >
+	          
+               </div>   				
+				</article> <!-- end article -->
+				
+				<article class="brick entry format-quote animate-this" >
+				<div class="map-container">
+				<div>	
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2751.3903825592106!2d6.5890308769714245!3d46.40131487110491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c2354d7898293%3A0x95c3d195b3eecd07!2sPalais%20Lumi%C3%A8re!5e0!3m2!1sfr!2sfr!4v1695633081418!5m2!1sfr!2sfr" 
+				width="150" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+			   </div>
+				</article> <!-- end article -->
+				
+				<article class="brick entry format-quote animate-this">
+
+						<div>
+							<br>
+								<h2>Tarifs et Informations</h2>
+								<h3>Tous publics :</h3>
+								
+									<ul>Plein tarif : 8,50 €.</ul>
+									<ul>Visites commentées pour les individuels tous les jours à 14h30 : 4 € en plus du ticket d’entrée.</ul>
+									<ul>Visites thématiques : 4 € en plus du ticket d’entrée (voir détail dans « en regard de l’exposition »).</ul>
+								
+								<h3>Jeunes / Familles :</h3>
+								
+								<ul>Gratuit pour les moins de 16 ans.
+								<ul>	Tarif réduit : étudiants, familles nombreuses, membre du club « Petit Léonard » : 6,50 €.</ul>
+								<ul>	Parcours découverte pour les enfants (-10 ans) accompagnés de leurs parents, tous les mercredis à 16h : 6 € (adulte).</ul>
+								<ul>	« Petit jeu du Palais Lumière » (6-12 ans) : un livret pour visiter l’exposition de manière ludique, disponible à l’accueil.</ul>
+								<ul>	Ateliers pédagogiques : 5 €/enfant-adolescent/atelier et en famille – 8 €/adulte (voir détail dans « en regard de l’exposition »).</ul>
+								
+								<!-- Added phone number and website link -->
+								<div class="contact-info">
+									<p>Contact Information:</p>
+									<a href="tel:0450831590">
+										<i class="fa fa-phone"></i> 04 50 83 15 90
+									</a><br>
+									<a href="https://ville-evian.fr/fr/palais-lumiere" target="_blank">
+										<i class="fa fa-building"></i> Site Web Palais des Lumieres
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+				
+									
+	
+
+         </div> <!-- end brick-wrapper --> 
+
+   	</div> <!-- end row -->
+
+   </section> <!-- end bricks -->
+
+   
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+   	<div class="footer-main">
+
+   		<div class="row">  
+
+	      	<div class="col-four tab-full mob-full footer-info" style="text-align: center;">            
+
+	            <h4>À propos de notre site</h4>
+
+	               <p>
+					Ce site présente les œuvres de Johannes Vermeer à travers des images tirées d'un livre que nous avons acheté. Nous avons sélectionné ces images pour mettre en lumière l'art exceptionnel de Vermeer et espérons qu'elles enrichiront votre appréciation de cet artiste talentueux.
+		          	</p>
+
+		      </div> <!-- end footer-info -->
+
+	      	<div class="col-two tab-1-3 mob-1-2 site-links" style="text-align: center;">
+
+	      		<h4>Réalisation</h4>
+
+				  <p>Réalisé par Nathan DAMASSE élève de l'établissement Saint-Michel</p>
+
+	      	</div> <!-- end site-links -->  
+
+	      	<div class="col-two tab-1-3 mob-1-2 social-links">
+
+	      		<h4>Social</h4>
+
+	      		<ul>
+	      			<li><a href="https://twitter.com/evian_ville">Twitter</a></li>
+						<li><a href="https://www.facebook.com/EvianVille/">Facebook</a></li>
+						<li><a href="https://www.flickr.com/photos/119654585@N07/sets">Flickr</a></li>
+						<li><a href="https://www.youtube.com/channel/UCYbZtGfSFFbOdSNytILCJQw">Youtube</a></li>
+						<li><a href="https://www.instagram.com/eviantourisme/">Instagram</a></li>
+					</ul>
+	      	           	
+	      	</div> <!-- end social links --> 
+
+	      	<div class="col-four tab-1-3 mob-full footer-subscribe">
+
+	      		<h4>Abonnez-vous</h4>
+
+	      		<p>Tenez-vous au courant. Abonnez-vous à notre newsletter.</p>
+
+	      		<div class="subscribe-form">
+	      	
+	      			<form id="mc-form" class="group" novalidate="true">
+
+							<input type="email" value="" name="dEmail" class="email" id="mc-email" placeholder="Tapez &amp; appuyez sur entrée" required=""> 
+	   		
+			   			<input type="submit" name="subscribe" >
+		   	
+		   				<label for="mc-email" class="subscribe-message"></label>
+			
+						</form>
+
+	      		</div>	      		
+	      	           	
+	      	</div> <!-- end subscribe -->         
+
+	      </div> <!-- end row -->
+
+   	</div> <!-- end footer-main -->
+
+      <div class="footer-bottom">
+      	<div class="row">
+
+      		<div class="col-twelve">
+	      		<div class="copyright">
+		         	<span>© Copyright Abstract 2016</span> 
+		         	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>		         	
+		         </div>
+
+		         <div id="go-top">
+		            <a class="smoothscroll" title="Back to Top" href="#top"><i class="icon icon-arrow-up"></i></a>
+		         </div>         
+	      	</div>
+
+      	</div> 
+      </div> <!-- end footer-bottom -->  
+
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/jquery.appear.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
